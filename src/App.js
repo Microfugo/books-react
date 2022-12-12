@@ -3,7 +3,7 @@ import Logo from "./componentes/Logo"
 import perfil from "./imagens/perfil.svg"
 import sacola from "./imagens/sacola.svg"
 
-const textoOpcoes = ["CATEGORIAS, FAVORITOS, MINHA ESTANTE"]
+const textoOpcoes = ["CATEGORIAS", "FAVORITOS", "MINHA ESTANTE"]
 const icones = [perfil, sacola]
 
 function App() {
