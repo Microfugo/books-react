@@ -1,9 +1,9 @@
 .logo {
-    display: flex; /*disponibiliza na horizontal */
+    display: flex; 
     font-size: 30px;
     
   }
 
 .logo-img {
-    margin-right: 10px;;
+    margin-right: 5px;;
 }
