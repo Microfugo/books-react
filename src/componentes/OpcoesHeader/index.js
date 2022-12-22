@@ -7,7 +7,7 @@ display: flex;
 const Opcao = styled.li`
 font-size: 16px;
 display: flex;
-justify-content: center;
+justify-content: center; 
 align-items: center;
 text-align: center;
 height: 100%;
@@ -21,7 +21,7 @@ const textoOpcoes = ['CATEGORIAS', 'FAVORITOS', 'MINHA ESTANTE']
 function OpcoesHeader() {
     return (
         <Opcoes>
-            { textoOpcoes.map ( (texto) => (
+            { textoOpcoes.map ((texto) => (
                 <Opcao><p>{texto}</p></Opcao>
             ) ) }
         </Opcoes>
