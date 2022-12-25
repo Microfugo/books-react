@@ -25,21 +25,26 @@ const Subtitulo = styled.h3`
     margin-bottom: 40px;
 `
 
-function Pesquisa(){
-    const [ textoDigitado, setTextoDigitado ] = useState("")
+// ...
+
+function Pesquisa() {
+    const [ livrosPesquisados, setLivrosPesquisados ] = useState([])
+
+    console.log(livrosPesquisados)
 
     return (
         <PesquisaContainer>
-            <Titulo>Já sabe por onde começar ?</Titulo>
-            <Subtitulo>Encontre seu livro na nossa estante</Subtitulo>
+            <Titulo>Já sabe por onde começar?</Titulo>
+            <Subtitulo>Encontre seu livro em nossa estante.</Subtitulo>
             <Input
                 placeholder="Escreva sua próxima leitura"
-                onBlur={evento => setTextoDigitado(evento.target.value)}
+                onBlur={evento => {
+                    const textoDigitado = evento.target.value
+                    const resultadoPesquisa = livros.filter( livro => livro.nome.includes(textoDigitado) )
+                    setLivrosPesquisados(resultadoPesquisa)
+                }}
             />
-
-            <p>{textoDigitado}</p>
         </PesquisaContainer>
-
     )
 }
 
