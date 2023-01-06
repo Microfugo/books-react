@@ -1,6 +1,13 @@
+import { livros } from "./dadosUltimosLancamentos"
+
 function UltimosLancamentos() {
     return (
-        <h2>ULTIMOS LANCAMENTOS</h2>
+        <section>        
+            <h2>ULTIMOS LANCAMENTOS</h2>
+            {livros.map( livro => (
+            <img src={livro.src} alt="livros"/>
+        ))}
+        </section>
     )
 }
 
